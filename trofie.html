@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trofie Bild</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d47f00; /* Hintergrundfarbe */
+            font-family: Arial, sans-serif; /* Schriftart */
+            position: relative; /* Für die Positionierung der Links */
+            overflow: hidden; /* Verhindert Scrollen */
+        }
+
+        .text {
+            position: absolute; /* Absolut positionierter Text */
+            text-align: right; /* Text zentrieren */
+            color: #0000ff; /* Textfarbe */
+            width: 80%; /* Breite des Textes */
+            top: 50%; /* Position vertikal */
+            transform: translateY(-50%); /* Zentrierung */
+        }
+
+        .link {
+            position: absolute; /* Positionierung für die Links */
+            color: #0000ff; /* Linkfarbe */
+            font-size: 1.2em; /* Schriftgröße für Links */
+        }
+
+        /* Positionierung der Links in den Ecken */
+        .link.top-left {
+            top: 60px; /* Oben */
+            left: 60px; /* Links */
+        }
+
+        .link.top-right {
+            top: 60px; /* Oben */
+            right: 20px; /* Rechts */
+        }
+
+        .link.bottom-left {
+            bottom: 60px; /* Unten */
+            left: 60px; /* Links */
+        }
+
+        .link.bottom-right {
+            bottom: 20px; /* Unten */
+            right: 660px; /* Rechts */
+        }
+
+        #trofie {
+            max-width: 100%; /* Maximalbreite des Bildes */
+            max-height: 90%; /* Maximalhöhe des Bildes */
+            margin-right: 500px;
+            display: block; /* Bildblock */
+        }
+    </style>
+</head>
+<body>
+    <a class="link top-left" href="index.html">← 999</a>
+    <a class="link bottom-right" href="index.html">← Kalter Tee</a>
+
+    <img id="trofie" src="images/trofie.jpg" alt="Trofie Bild">
+    
+    <div class="text">
+        <p>Wenn ich könnte, würd ich mich für dich verändern.<br>
+        Wie ich bin, scheint viel zu viel zu sein für dich.<br>
+        Wenn ich könnte, wär ich dir nun mal auch woanders begegnet.<br>
+        Es stürmt und regnet. Wieso lässt mich hier niemand hinein?</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fange Kurtis!</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font'; /* Name der Schriftart */
+            src: url('fonts/W95FA.otf') format('truetype'); /* Pfad zur Schriftartdatei */
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            margin: 0;
+            overflow: hidden; /* Verhindert Scrollen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #557fff; /* Hintergrundfarbe */
+            font-family: 'Windows95Font', Arial, sans-serif; /* Windows95-Schriftart */
+            position: relative; /* Für die Positionierung der Links */
+        }
+
+        h1 {
+            position: absolute; /* Positionieren des Texts */
+            top: 20px; /* Abstand von oben */
+            text-align: center; /* Text zentrieren */
+            color: #00ff55; /* Textfarbe */
+            font-size: 2em; /* Schriftgröße */
+        }
+
+        .link {
+            position: absolute; /* Positionierung für die Links */
+            color: #00ff55; /* Linkfarbe */
+            font-size: 1.5em; /* Schriftgröße für Links */
+        }
+        .link.topl {
+            left: 20px; /* Linke Position */
+            top: 20px; /* Oben */
+        }
+
+        .link.topr {
+            right: 20px; /* Rechte Position */
+            top: 20px; /* Oben */
+        }
+        .link.left {
+            left: 20px; /* Linke Position */
+            bottom: 20px; /* Unten */
+        }
+
+        .link.right {
+            right: 20px; /* Rechte Position */
+            bottom: 20px; /* Unten */
+        }
+
+        #kurtis {
+            position: absolute; /* Absolut positioniert */
+            width: 100px; /* Breite des Bildes */
+            transition: transform 0.1s; /* Übergangseffekt */
+        }
+
+        #kurtis-large {
+            display: none; /* Start mit unsichtbarem großen Bild */
+            position: absolute;
+            width: 300px; /* Breite des großen Bildes */
+            transition: opacity 0.5s; /* Übergangseffekt für Opazität */
+        }
+    </style>
+</head>
+<body>
+    <h1>Fange Kurtis dreimal!</h1>
+    <a class="link topl" href="index.html">wieso?</a>
+    <a class="link topr" href="index.html">weshalb?</a>
+    <a class="link left" href="index.html">warum?</a>
+    <a class="link right" href="index.html">wozu?</a>
+    <img id="kurtis" src="images/kurtis.jpg" alt="Kurtis Bild">
+    <img id="kurtis-large" src="images/kurtis.jpg" alt="Kurtis Bild groß">
+
+    <script>
+        const kurtis = document.getElementById('kurtis');
+        const kurtisLarge = document.getElementById('kurtis-large');
+        let count = 0;
+
+        function moveKurtis() {
+            const x = Math.random() * (window.innerWidth - 100); // Breite des Fensters
+            const y = Math.random() * (window.innerHeight - 100); // Höhe des Fensters
+            kurtis.style.transform = `translate(${x}px, ${y}px)`; // Position des Bildes
+        }
+
+        kurtis.addEventListener('click', () => {
+            count++;
+            if (count < 3) {
+                alert(`Du hast Kurtis gefangen! (${count}/3)`);
+                moveKurtis(); // Bild verschieben
+            } else {
+                alert('Gewonnen!');
+                kurtis.style.display = 'none'; // Originalbild ausblenden
+                document.querySelector('h1').innerText = 'Gewonnen!'; // Text ändern
+                kurtisLarge.style.display = 'block'; // Großes Bild anzeigen
+                kurtisLarge.style.opacity = '1'; // Opazität setzen
+            }
+        });
+
+        setInterval(moveKurtis, 1000); // Bild alle 1 Sekunde verschieben
+        moveKurtis(); // Bild initial bewegen
+    </script>
+</body>
+</html>

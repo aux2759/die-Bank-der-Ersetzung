@@ -92,3 +92,21 @@ section {
 .main a {
     color: #ffffff; /* White color for links */
 }
+@media (max-width: 600px) {
+    body {
+        justify-content: flex-start; /* Align items to the top */
+    }
+
+    main {
+        font-size: 1.5em; /* Kleinere Schriftgröße für Smartphones */
+        padding: 10px; /* Weniger Padding auf Smartphones */
+    }
+
+    h2 {
+        font-size: 1.3em; /* Kleinere Überschrift für Smartphones */
+    }
+
+    .image-container {
+        margin-right: 20px; /* Weniger Margin auf Smartphones */
+    }
+}
