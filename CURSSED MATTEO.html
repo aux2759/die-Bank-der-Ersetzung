@@ -4,7 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursed Matteo</title>
-    <link rel="stylesheet" href="cursed-matteo.css"> <!-- Link zur CSS-Datei -->
+    <style>
+        @font-face {
+            font-family: 'Windows95Font';
+            src: url('fonts/W95FA.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%; /* Ensure body fills full height */
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        body {
+            font-family: Windows95Font, Windows95Font;
+            background-color: #d41fff; /* Background color */
+            color: #000000; /* Black text color */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Arrange children vertically */
+            align-items: flex-start; /* Align children to the start */
+            justify-content: flex-start; /* Align children to the start */
+            position: relative; /* Position for absolute child elements */
+        }
+
+        .cursed-image {
+            max-width: 100%; /* Make image responsive */
+            max-height: 100%; /* Ensure image does not exceed height */
+            margin: auto; /* Center image horizontally */
+            display: block; /* Ensure the image is displayed as a block */
+        }
+
+        .link-container {
+            position: absolute; /* Positioning for links */
+            bottom: 20px; /* Space from the bottom */
+            right: 20px; /* Space from the right */
+            text-align: left; /* Right align links */
+        }
+
+        .link-container a {
+            display: block; /* Display links one below the other */
+            color: #ffdfaa; /* Link color */
+            margin: 5px 0; /* Space between links */
+            font-size: 1.3em; /* Adjust font size */
+        }
+    </style>
 </head>
 <body>
     <img src="images/cursed-matteo.png" alt="Cursed Matteo" class="cursed-image"> <!-- Bild -->
@@ -12,8 +63,8 @@
     <div class="link-container"> <!-- Container für die Links unten rechts -->
         <a href="nur ein wort.html">← nur ein wort</a> <!-- Link 1 -->
         <a href="billie jean.html">← billie jean</a> <!-- Link 2 -->
-        <a href="index.html">← smooth</a> <!-- Link 3 -->
-        <a href="index.html">← ironic</a> <!-- Link 4 -->
+        <a href="smooth.html">← smooth</a> <!-- Link 3 -->
+        <a href="ironic.html">← ironic</a> <!-- Link 4 -->
     </div>
 </body>
 </html>

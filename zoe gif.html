@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoe GIF</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font';
+            src: url('fonts/W95FA.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #2a3f00; /* Hintergrundfarbe */
+            color: #d4bfff; /* Textfarbe */
+            font-family: Windows95Font; /* Windows 95 Schriftart */
+            overflow: hidden; /* Verhindert Scrollen */
+            height: 100vh; /* Höhe der Viewport */
+            display: flex; /* Flexbox für das Layout */
+            justify-content: center; /* Horizontale Zentrierung */
+            align-items: center; /* Vertikale Zentrierung */
+            position: relative; /* Position für absolute Elemente */
+        }
+
+        .gif-container {
+            position: relative; /* Positionierung für GIF */
+            z-index: 1; /* Z-Index, um sicherzustellen, dass das GIF oben bleibt */
+        }
+
+        .text-container {
+            display: flex; /* Flexbox für Textspalten */
+            position: absolute; /* Position für Textcontainer */
+            top: 0; /* Start von oben */
+            width: 100%; /* Volle Breite */
+            height: 100%; /* Volle Höhe */
+            overflow: hidden; /* Verhindert Scrollen */
+        }
+
+        .mimimi {
+            white-space: nowrap; /* Verhindert Zeilenumbruch */
+            font-size: 5em; /* Schriftgröße */
+            color: #d4bfff; /* Textfarbe */
+            animation: scroll 100s linear infinite; /* Unendliche Animation */
+            position: absolute; /* Position für absolute Platzierung */
+            top: 0; /* Start von oben */
+            left: 0; /* Start von links */
+        }
+
+        /* Scroll-Animation für Text */
+        @keyframes scroll {
+            0% {
+                transform: translateY(1%); /* Startposition */
+            }
+            100% {
+                transform: translateY(-200%); /* Endposition (zweifache Höhe) */
+            }
+        }
+
+        /* Spaltenstile */
+        .column {
+            flex: 1; /* Gleiche Breite für alle Spalten */
+            display: flex; /* Flexbox für Spalten */
+            justify-content: center; /* Horizontale Zentrierung */
+            align-items: flex-start; /* Startausrichtung */
+            position: relative; /* Positionierung für Text */
+        }
+
+        .mimimi a {
+            color: #d4bfff; /* Linkfarbe für die Texte */
+            text-decoration: underline; /* Unterstreicht Links */
+        }
+
+        /* Stil für den festen Link */
+        .fixed-link a {
+            position: fixed; /* Feste Position */
+            bottom: 20px; /* Abstand vom unteren Rand */
+            left: 50%; /* Zentrierung von links */
+            transform: translateX(-50%); /* Horizontale Zentrierung */
+            font-size: 2em; /* Schriftgröße */
+            color: #d4bfff; /* Linkfarbe für die Texte */
+            text-decoration: underline; /* Unterstreicht den Link */
+            z-index: 10; /* Z-Index, um sicherzustellen, dass der Link oben bleibt */
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="images/zoe gif.gif" alt="Zoe GIF"> <!-- Das GIF wird hier angezeigt -->
+    </div>
+
+    <div class="text-container">
+        <div class="column">
+            <div class="mimimi">
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="mimimi">
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="mimimi">
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+                <div><a href="index.html">weiter?</a></div>
+                <div>mimimimi</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fester Link -->
+    <div class="fixed-link">
+        <a href="index.html">weiter?</a>
+    </div>
+</body>
+</html>

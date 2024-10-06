@@ -4,13 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <title>jonas</title>
-    <link rel="stylesheet" href="jonas.css"> <!-- Link zur CSS-Datei -->
+    <style>
+        @font-face {
+            font-family: 'Windows95Font';
+            src: url('fonts/W95FA.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%; /* Ensure body fills full height */
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        body {
+            font-family: Windows95Font, Windows95Font;
+            background-color: #d4ffaa; /* Background color */
+            color: #000000; /* Black text color */
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center items horizontally */
+            position: relative; /* Position for absolute child elements */
+        }
+
+        .jonas {
+            max-width: 100%; /* Make image responsive */
+            max-height: 100%; /* Ensure image does not exceed height */
+            margin: auto; /* Center image horizontally */
+            display: block; /* Ensure the image is displayed as a block */
+        }
+
+        .link-container {
+            position: absolute; /* Positioning for links */
+            bottom: 20px; /* Space from the bottom */
+            right: 20px; /* Space from the right */
+            text-align: left; /* Right align links */
+        }
+
+        .link-container a {
+            display: block; /* Display links one below the other */
+            color: #d40000; /* Link color */
+            margin: 5px 0; /* Space between links */
+            font-size: 1.3em; /* Adjust font size */
+        }
+    </style>
 </head>
 <body>
-    <img src="images/jonas.png" alt="Jonas" class="Jonas"> <!-- Bild -->
+    <img src="images/jonas.png" alt="Jonas" class="jonas"> <!-- Bild -->
     
     <div class="link-container"> <!-- Container für die Links unten rechts -->
-        <a href="nur ein wort.html">← hysteria</a> <!-- Link 1 -->
+        <a href="hysteria.html">← hysteria</a> <!-- Link 1 -->
         <a href="billie jean.html">← billie jean</a> <!-- Link 2 -->
         <a href="wodka nudeln.html">← wodka nudeln rezept</a> <!-- Link 3 -->
         <a href="index.html">← ironic</a> <!-- Link 4 -->

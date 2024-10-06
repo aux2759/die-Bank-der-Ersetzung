@@ -3,11 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    <title>band gif</title>
-    <link rel="stylesheet" href="band-gif.css"> <!-- Link zur CSS-Datei -->
+    <title>Band GIF</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font';
+            src: url('fonts/W95FA.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%; /* Ensure body fills full height */
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        body {
+            font-family: Windows95Font, Windows95Font;
+            background-color: #00ffff; /* Background color */
+            color: #ffff00; /* White text color */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Arrange children vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            position: relative; /* Position for absolute child elements */
+        }
+
+        .band-gif {
+            max-width: 100%; /* Make image responsive */
+            max-height: 70vh; /* Limit height to 70% of viewport height */
+            margin: 50px 0; /* Space above and below the image */
+            display: block; /* Ensure the image is displayed as a block */
+        }
+
+        .link-container {
+            position: absolute; /* Positioning for links */
+            bottom: 500px; /* Space from the bottom */
+            right: 20px; /* Space from the right */
+            text-align: right; /* Right align links */
+        }
+
+        .link-container a {
+            display: block; /* Display links one below the other */
+            color: #ffff00; /* Link color */
+            font-size: 1.2em; /* Adjust font size */
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-    <img src="images/band gif.gif" alt="band gif" class="band gif"> <!-- Bild -->
+    <img src="images/band gif.gif" alt="Band GIF" class="band-gif"> <!-- Bild -->
     
     <div class="link-container"> <!-- Container für die Links unten rechts -->
         <a href="index.html">← dsfnkjdsafj</a> <!-- Link 1 -->

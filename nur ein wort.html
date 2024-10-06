@@ -4,13 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nur ein Wort</title>
-    <link rel="stylesheet" href="nur-ein-wort.css"> <!-- Verlinkung zur CSS-Datei -->
+    <style>
+        @font-face {
+            font-family: 'Windows95Font';
+            src: url('fonts/W95FA.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%; /* Stellen Sie sicher, dass der Body die volle Höhe einnimmt */
+        }
+
+        body {
+            font-family: Windows95Font, Windows95Font;
+            background-color: #d4ff00; /* Gelber Hintergrund */
+            display: flex; /* Flexbox für die Zentrierung */
+            justify-content: center; /* Horizontale Zentrierung */
+            align-items: center; /* Vertikale Zentrierung */
+            position: relative; /* Position für das linke Container */
+        }
+
+        .container {
+            text-align: center; /* Zentrierter Text */
+        }
+
+        h1 {
+            font-size: 20em; /* Größe des Wortes */
+            color: #ffffff; /* Weiße Schriftfarbe */
+            animation: rotateWord 10s linear infinite; /* Rotationseffekt */
+        }
+
+        /* Animation für die Rotation */
+        @keyframes rotateWord {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .link-container {
+            position: absolute; /* Positioning for links */
+            bottom: 20px; /* Space from the bottom */
+            left: 20px; /* Space from the left */
+            text-align: left; /* Links links ausrichten */
+        }
+
+        .link-container a {
+            display: block; /* Links untereinander anzeigen */
+            color: white; /* Linkfarbe */
+            margin: 5px 0; /* Abstand zwischen Links */
+            font-size: 1.3em; /* Schriftgröße der Links */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>WORT</h1> <!-- Das Wort, das angezeigt wird -->
     </div>
-    <div class="link-container"> <!-- Container für die Links unten rechts -->
+    <div class="link-container"> <!-- Container für die Links unten links -->
         <a href="band-gif.html">← 42135</a> <!-- Link 1 -->
         <a href="index.html">← 13524</a> <!-- Link 2 -->
         <a href="index.html">← 31254</a> <!-- Link 3 -->

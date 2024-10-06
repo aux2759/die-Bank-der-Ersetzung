@@ -4,7 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page 1 - Skylla und Charybdis</title>
-    <link rel="stylesheet" href="page1.css"> <!-- Linking the same CSS file -->
+    <style>
+        @font-face {
+            font-family: 'Windows95Font';
+            src: url('fonts/W95FA.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;  
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        body {
+            font-family: Windows95Font, Windows95Font;
+            background-color: #55ff00; /* Background color */
+            color: #ffffff; /* White text color */
+            line-height: 1.5; /* Adjust line height for readability */
+        }
+
+        main {
+            margin-top: 0px;
+            font-size: 2.5em; /* Main font size */
+        }
+
+        h2 {
+            font-size: 2em; /* Size for h2 headings */
+        }
+
+        section {
+            margin-left: 50px; /* Left margin for section */
+            margin-bottom: 20px; /* Bottom margin for section */
+        }
+
+        /* General link styles */
+        a {
+            color: white; /* Link color */
+        }
+
+        /* Page 1 styles */
+        .page1 {
+            background-color: #55ff00; /* New background color */
+            color: #f0f0f0; /* General text color */
+            height: 100%; /* Full height */
+        }
+
+        .page1 h2 {
+            color: #ffffff; /* White color for h2 */
+        }
+
+        .page1 a {
+            color: #ffffff; /* White color for links */
+        }
+
+        .link-container {
+            position: absolute; /* Positioning for links */
+            bottom: 100px; /* Space from the bottom */
+            right: 60px; /* Space from the right */
+            text-align: left; /* Align text to the left */
+        }
+    </style>
 </head>
 <body>
     <main class="page1"> <!-- Added class for specific styling -->
@@ -12,7 +79,7 @@
             <h2>Skylla und Charybdis</h2>
             <p>In mare navigantes, Odysseus et socii ad 
                 Scyllam et Charybdim pervenerunt.
-                 Inter Scyllam, monstrosum et terribile, cum caput 
+                Inter Scyllam, monstrosum et terribile, cum caput 
                 sex et canes rapaces haberet, 
                 et Charybdim, voracem vortex, navigare debebant. 
                 Odysseus, ductor fortis, consilium cepit. Dixit: 
@@ -25,13 +92,13 @@
                 captos duos nautas rapuit. Et cum Charybdis vorax, 
                 navem devoravit. Odysseus, lugens et dolens, hoc 
                 difficile iter in memoriam retinuit.
-                </p>
-                <div class="link-container"> <!-- Container für die Links unten rechts -->
-                    <a href="band-gif.html">← abcdefg</a> <!-- Link 1 -->
-                    <a href="index.html">← hijklmno</a> <!-- Link 2 -->
-                    <a href="index.html">← pqrstuv</a> <!-- Link 3 -->
-                    <a href="index.html">← wxyu</a> <!-- Link 3 -->
-                </div>
+            </p>
+            <div class="link-container"> <!-- Container für die Links unten rechts -->
+                <a href="band-gif.html">← abcdefg</a> <!-- Link 1 -->
+                <a href="index.html">← hijklmno</a> <!-- Link 2 -->
+                <a href="index.html">← pqrstuv</a> <!-- Link 3 -->
+                <a href="index.html">← wxyu</a> <!-- Link 4 -->
+            </div>
         </section>
     </main>
 </body>

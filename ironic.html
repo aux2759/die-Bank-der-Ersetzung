@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ironic</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font';
+            src: url('fonts/W95FA.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #00ff55; /* Initial background color */
+            color: #ffff00; /* Text color */
+            font-family: 'Windows95Font', Arial, sans-serif; /* Windows 95 font */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            text-align: center; /* Center align text */
+            margin: 0; /* Remove default margin */
+        }
+
+        h1 {
+            font-size: 5em; /* Large text size */
+            margin-bottom: 20px; /* Space below the text */
+        }
+
+        select {
+            font-size: 2em; /* Size of dropdown */
+            padding: 10px; /* Padding inside dropdown */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            font-family: 'Windows95Font', Arial, sans-serif; /* Apply the same font to dropdown */
+            margin-bottom: 20px; /* Space below the dropdown */
+        }
+
+        .links {
+            margin-top: 20px; /* Space above links */
+        }
+
+        .links a {
+            color: #ffff00; /* Link color */
+            font-size: 1.5em; /* Size of links */
+            text-decoration: underline; /* Underline links */
+            margin: 0 10px; /* Space between links */
+        }
+
+        .links a:hover {
+            color: #ff69b4; /* Change color on hover */
+        }
+
+        #additionalText {
+            display: none; /* Initially hidden */
+            font-size: 3em; /* Font size for additional text */
+            margin-top: 20px; /* Space above additional text */
+        }
+    </style>
+</head>
+<body>
+    <h1>isn't it</h1>
+    <select id="ironySelect" onchange="changeBackground()">
+        <option value="">Select an option</option>
+        <option value="unironic">Unironic</option>
+        <option value="smooth">Smooth</option>
+        <option value="hysteria">Hysteria</option>
+        <option value="undone">Undone</option>
+        <option value="odyssee">Odyssee</option>
+        <option value="ironic">Ironic</option> <!-- Ironic is now the last option -->
+    </select>
+    <div id="additionalText">don't you think?</div> <!-- Text that appears when "Ironic" is selected -->
+
+    <div class="links">
+        <a href="index.html">alpha</a>
+        <a href="index.html">beta</a>
+        <a href="index.html">gamma</a>
+    </div>
+
+    <script>
+        function changeBackground() {
+            const select = document.getElementById('ironySelect');
+            const selectedValue = select.value;
+            const additionalText = document.getElementById('additionalText');
+
+            switch (selectedValue) {
+                case "unironic":
+                    document.body.style.backgroundColor = "#ff69b4"; // Pink color
+                    additionalText.style.display = "none"; // Hide additional text
+                    break;
+                case "smooth":
+                    document.body.style.backgroundColor = "#00ffff"; // Light blue
+                    additionalText.style.display = "none"; // Hide additional text
+                    break;
+                case "hysteria":
+                    document.body.style.backgroundColor = "#ff4500"; // Orange red
+                    additionalText.style.display = "none"; // Hide additional text
+                    break;
+                case "undone":
+                    document.body.style.backgroundColor = "#aadf55"; // Yellow
+                    additionalText.style.display = "none"; // Hide additional text
+                    break;
+                case "odyssee":
+                    document.body.style.backgroundColor = "#008080"; // Teal
+                    additionalText.style.display = "none"; // Hide additional text
+                    break;
+                case "ironic":
+                    document.body.style.backgroundColor = "#ff00aa"; // Inverted color
+                    additionalText.style.display = "block"; // Show additional text
+                    break;
+                default:
+                    document.body.style.backgroundColor = "#00ff55"; // Reset to original color
+                    additionalText.style.display = "none"; // Hide additional text
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

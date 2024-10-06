@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probe Seite</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font'; /* Name der Schriftart */
+            src: url('fonts/W95FA.otf') format('truetype'); /* Pfad zur Schriftartdatei */
+            font-weight: normal;
+            font-style: normal;
+            font-size: larger;
+        }
+
+        body {
+            font-family: 'Windows95Font', Arial, sans-serif;
+            background-color: #7f1fff; /* Hintergrundfarbe */
+            color: #ff3faa; /* Textfarbe */
+            display: flex; /* Flexbox für die Anordnung */
+            align-items: center; /* Vertikale Ausrichtung */
+            justify-content: flex-start; /* Horizontale Ausrichtung */
+            padding: 20px; /* Padding hinzufügen */
+            margin: 0; /* Standardmargin entfernen */
+        }
+
+        h1 {
+            margin: 0 20px; /* Abstand zum Bild */
+            text-transform: uppercase; /* Großbuchstaben */
+            font-size: 2em; /* Schriftgröße */
+            animation: flicker 1.5s infinite; /* Flicker-Animation */
+        }
+
+        img {
+            max-width: 300px; /* Maximale Breite der Bilder */
+            height: auto; /* Automatische Höhe */
+            margin-right: 20px; /* Abstand zwischen Bildern und Text */
+        }
+
+        a {
+            color: #ff3faa; /* Linkfarbe */
+            font-size: 1.5em; /* Schriftgröße des Links */
+            margin-left: 20px; /* Abstand zum Text */
+        }
+
+        /* Flicker-Animation */
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+            }
+            20%, 22%, 24%, 55% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="images/probe1.png" alt="Probe 1 Bild"> <!-- Bild ganz links -->
+    <h1>JETZT FANGT DIE PROBE AN</h1> <!-- Text mit Flickereffekt -->
+    <img src="images/jetzt.png" alt="Jetzt Bild"> <!-- Bild daneben -->
+    <a href="index.html">weiter?</a> <!-- Link zu index.html -->
+    <a href="index.html">continue?</a> <!-- Link zu index.html -->
+    <a href="index.html">weiter?</a> <!-- Link zu index.html -->
+</body>
+</html>

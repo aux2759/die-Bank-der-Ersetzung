@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bild und Links</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font'; /* Name der Schriftart */
+            src: url('fonts/W95FA.otf') format('truetype'); /* Pfad zur Schriftartdatei */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #2a1fff; /* Hintergrundfarbe */
+            color: white; /* Textfarbe */
+            font-family: 'Windows95Font', Arial, sans-serif; /* Windows95-Schriftart */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        img {
+            max-width: 60%; /* Maximale Breite des Bildes */
+            height: auto; /* Höhe automatisch anpassen */
+        }
+
+        .link-left, .link-right {
+            position: absolute;
+            top: 50%; /* Vertikale Zentrierung */
+            transform: translateY(-50%);
+            font-size: 2em; /* Schriftgröße */
+            color: white;
+            text-decoration: underline; /* Dauerhafte Unterstreichung */
+            text-underline-offset: 4px; /* Optional: Abstand der Unterstreichung zum Text */
+            text-decoration-thickness: 2px; /* Dicke der Unterstreichung */
+        }
+
+        .link-left {
+            left: 20px; /* Abstand von links */
+        }
+
+        .link-right {
+            right: 20px; /* Abstand von rechts */
+        }
+    </style>
+</head>
+<body>
+    <a href="alle.html" class="link-left">alle?</a> <!-- Link links -->
+    <img src="images/zoe.jpg" alt="Zoe Bild"> <!-- Bild in der Mitte -->
+    <a href="skip.html" class="link-right">SKIP!</a> <!-- Link rechts -->
+</body>
+</html>

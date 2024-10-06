@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Mixer</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font';
+            src: url('fonts/W95FA.otf') format('truetype'); /* Stelle sicher, dass der Pfad zur Schriftart korrekt ist */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #7f1faa; /* Hintergrundfarbe */
+            color: #d4ffaa; /* Textfarbe */
+            font-family: 'Windows95Font', Arial, sans-serif; /* Windows 95 Schriftart */
+            text-align: center;
+            padding: 20px;
+            position: relative; /* Relative Position für den Footer */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px; /* Größere Schriftgröße für den Header */
+        }
+
+        .mixer {
+            display: flex; /* Flexbox für horizontales Layout */
+            justify-content: center; /* Zentriere den Inhalt */
+            align-items: flex-start; /* Elemente oben ausrichten */
+        }
+
+        .track {
+            margin: 15px;
+            width: 60px; /* Breitere Spalten für die Regler */
+            display: flex;
+            flex-direction: column; /* Label und Regler vertikal stapeln */
+            align-items: center; /* Label und Regler zentrieren */
+        }
+
+        label {
+            font-size: 18px; /* Größere Schriftgröße für die Labels */
+            margin-bottom: 10px; /* Abstand zwischen Label und Regler */
+        }
+
+        .slider {
+            -webkit-appearance: slider-vertical; /* Vertikaler Schieberegler für WebKit-Browser */
+            appearance: slider-vertical; /* Vertikaler Schieberegler für andere Browser */
+            width: 25px; /* Breitere Schieberegler */
+            height: 350px; /* Höhere Schieberegler */
+            border-radius: 5px;
+            background: #008080; /* Farbe der Schieberegler-Leiste */
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px; /* Größerer Schiebereglerknopf */
+            height: 25px; /* Größerer Schiebereglerknopf */
+            border-radius: 50%;
+            background: #ffffff; /* Farbe des Schiebereglerknopfs */
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px; /* Größerer Schiebereglerknopf */
+            height: 25px; /* Größerer Schiebereglerknopf */
+            border-radius: 50%;
+            background: #ffffff; /* Farbe des Schiebereglerknopfs */
+            cursor: pointer;
+        }
+
+        .audio {
+            display: none; /* Audioelemente verbergen */
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #008080;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Windows95Font', Arial, sans-serif;
+        }
+
+        button:hover {
+            background-color: #005959;
+        }
+
+        /* Footer-Text am unteren rechten Rand */
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #d4ffaa;
+        }
+
+        .footer a {
+            color: #d4ffaa;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorenz sagt "Misch selber!"</h1>
+    <div class="mixer">
+        <div class="track">
+            <label for="track1">Gitarre1</label>
+            <input type="range" id="track1" class="slider" min="0" max="1" step="0.01" value="0.3" orient="vertical"> <!-- 30% -->
+        </div>
+        <div class="track">
+            <label for="track2">Bass</label>
+            <input type="range" id="track2" class="slider" min="0" max="1" step="0.01" value="0.7" orient="vertical"> <!-- 70% -->
+        </div>
+        <div class="track">
+            <label for="track3">Keys</label>
+            <input type="range" id="track3" class="slider" min="0" max="1" step="0.01" value="0.6" orient="vertical"> <!-- 60% -->
+        </div>
+        <div class="track">
+            <label for="track4">Vocals</label>
+            <input type="range" id="track4" class="slider" min="0" max="1" step="0.01" value="0.5" orient="vertical"> <!-- 50% -->
+        </div>
+        <div class="track">
+            <label for="track5">Drums</label>
+            <input type="range" id="track5" class="slider" min="0" max="1" step="0.01" value="0.6" orient="vertical"> <!-- 60% -->
+        </div>
+    </div>
+
+    <!-- Play Button -->
+    <button id="playButton">Play All</button>
+
+    <audio id="audio1" class="audio" src="audio/track1.mp3" loop></audio>
+    <audio id="audio2" class="audio" src="audio/track2.mp3" loop></audio>
+    <audio id="audio3" class="audio" src="audio/track4.mp3" loop></audio>
+    <audio id="audio4" class="audio" src="audio/track3.mp3" loop></audio>
+    <audio id="audio5" class="audio" src="audio/track5.mp3" loop></audio>
+
+    <script>
+        // Play the audio files when play button is clicked
+        const audio1 = document.getElementById('audio1');
+        const audio2 = document.getElementById('audio2');
+        const audio3 = document.getElementById('audio3');
+        const audio4 = document.getElementById('audio4');
+        const audio5 = document.getElementById('audio5');
+        const playButton = document.getElementById('playButton');
+
+        // Event listener for play button
+        playButton.addEventListener('click', function() {
+            audio1.play();
+            audio2.play();
+            audio3.play();
+            audio4.play();
+            audio5.play();
+        });
+
+        // Volume sliders
+        const track1 = document.getElementById('track1');
+        const track2 = document.getElementById('track2');
+        const track3 = document.getElementById('track3');
+        const track4 = document.getElementById('track4');
+        const track5 = document.getElementById('track5');
+
+        // Initial volume setup
+        audio1.volume = track1.value; // Gitarre 30%
+        audio2.volume = track2.value; // Bass 70%
+        audio3.volume = track3.value; // Keys 60%
+        audio4.volume = track4.value; // Vocals 50%
+        audio5.volume = track5.value; // Drums 60%
+
+        track1.addEventListener('input', function() {
+            audio1.volume = this.value;
+        });
+
+        track2.addEventListener('input', function() {
+            audio2.volume = this.value;
+        });
+
+        track3.addEventListener('input', function() {
+            audio3.volume = this.value;
+        });
+
+        track4.addEventListener('input', function() {
+            audio4.volume = this.value;
+        });
+
+        track5.addEventListener('input', function() {
+            audio5.volume = this.value;
+        });
+    </script>
+
+    <!-- Footer mit Text und Link -->
+    <div class="footer">
+        <a href="index.html">gut so?</a>
+        <a href="index.html">lauter!!</a>
+    </div>
+</body>
+</html>

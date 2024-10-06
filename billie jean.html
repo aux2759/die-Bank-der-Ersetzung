@@ -2,94 +2,203 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billie Jean</title>
-    <link rel="stylesheet" href="billie-jean.css"> <!-- Linking the same CSS file -->
+    <style>
+        @font-face {
+            font-family: 'Windows95Font';
+            src: url('fonts/W95FA.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: auto; /* Allow scrolling if needed */
+        }
+
+        body {
+            font-family: Windows95Font, Windows95Font;
+            background-color: #aa1faa;
+            color: #00ffff;
+            line-height: 1.3; /* Adjusted line-height for readability */
+            font-size: 1.1em; /* Increased base font size */
+        }
+
+        main {
+            margin: 0 20px; /* Increased margins for wider layout */
+            font-size: 1.5em; /* Standard font size for main */
+        }
+
+        h2 {
+            font-size: 1.8em; /* Increased heading size */
+            margin-bottom: 10px; /* Reduced margin */
+        }
+
+        section {
+            margin: 10px 0; /* Reduced margin between sections */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            gap: 0.5em; /* Space between sentences */
+        }
+
+        /* General link styles */
+        a {
+            color: #00ffff;   
+        }
+
+        .billie-jean {
+            background-color: #aa1faa; /* New background color */
+            color: #00ffff; /* General text color */
+            height: auto; /* Auto height */
+        }
+
+        .link-container {
+            position: fixed; /* Fixed positioning for the link container */
+            right: 20px; /* Align to the right */
+            text-align: left; /* Align text to the left */
+            margin-right: 10px; /* Space from the right */
+            top: 10px; /* Space from the top */
+        }
+
+        /* Styles for the blanks */
+        .blank {
+            border-bottom: 1px solid #00ffff; /* Underline effect */
+            display: inline-block; /* Inline element with block properties */
+            width: 120px; /* Fixed width for the blanks */
+            margin: 0 5px; /* Margin for spacing */
+        }
+
+        /* Button styles */
+        .check-button {
+            font-family: Windows95Font, Windows95Font;
+            margin-top: 15px; /* Space above the button */
+            padding: 8px 12px; /* Padding inside the button */
+            font-size: 1.5em; /* Slightly larger font size for button */
+            background-color: #00ffff; /* Button color */
+            color: #aa1faa; /* Button text color */
+            border: none; /* Remove border */
+            cursor: pointer; /* Change cursor on hover */
+        }
+
+        .result {
+            margin-top: 10px; /* Space above the result message */
+            font-size: 1.5em; /* Font size for the result */
+            color: yellow; /* Result text color */
+        }
+    </style>
 </head>
 <body>
     <main class="billie-jean"> <!-- Added class for specific styling -->
         <section>
             <h2>Billie Jean</h2>
-            <p>[Verse 1]
-                She was more like a beauty queen from a movie scene
-                I said, "Don't mind, but what do you mean, I am the one
-                Who will dance on the floor in the round?"
-                She said I am the one
-                Who will dance on the floor in the round
-                She told me her name was Billie Jean as she caused a scene
-                Then every head turned with eyes that dreamed of bein' the one
-                Who will dance on the floor in the round
-                [Pre-Chorus]
-                People always told me, "Be careful of what you do
-                Don't go around breakin' young girls' hearts" (Hee-hee)
-                And mother always told me, "Be careful of who you love
-                And be careful of what you do (Oh-oh)
-                'Cause the lie becomes the truth" (Oh-oh), hey-ey
-                [Chorus]
-                Billie Jean is not my lover, uh
-                She's just a girl who claims that I am the one (Oh, baby)
-                But the kid is not my son (Hoo)
-                She says I am the one (Oh, baby)
-                But the kid is not my son (Hee-hee-hee, no-no, hee-hee-hee, hoo)
-                [Verse 2]
-                For forty days and for forty nights, the law was on her side
-                But who can stand when she's in demand? Her schemes and plans
-                'Cause we danced on the floor in the round (Hee)
-                So take my strong advice
-                Just remember to always think twice
-                (Don't think twice) Do think twice! (A-hoo!)
-                She told my baby we'd danced 'til three, then she looked at me
-                Then showed a photo of a baby cryin', his eyes were like mine (Oh, no)
-                'Cause we danced on the floor in the round, baby (Ooh, hee-hee-hee)
-                [Pre-Chorus]
-                People always told me, "Be careful of what you do
-                And don't go around breakin' young girls' hearts" (Don't break no hearts; hee-hee)
-                But she came and stood right by me
-                Just the smell of sweet perfume (Ha-oh)
-                This happened much too soon (Ha-oh, ha-ooh)
-                She called me to her room (Ha-oh, hoo), hey-ey
-                [Chorus]
-                Billie Jean is not my lover (Hoo)
-                She's just a girl who claims that I am the one
-                But the kid is not my son
-                No-no-no, no-no-no-no-no-no (Hoo)
-                Billie Jean is not my lover, uh
-                She's just a girl who claims that I am the one (Oh, baby)
-                But the kid is not my son (Oh, no, no)
-                She says I am the one (Oh, baby)
-                But the kid is not my son (No, hee-hee-hee, ah, hee-hee-hee)
-                [Break]
-                Hee, hoo
-                [Chorus]
-                She says I am the one, uh
-                But the kid is not my son (No-no-no, hoo, ohh)
-                Billie Jean is not my lover, uh
-                She's just a girl who claims that I am the one (You know what you did to me, baby)
-                But the kid is not my son
-                No-no-no (No-no-no, ah), no-no-no-no (No-no-no)
-                She says I am the one (No)
-                But the kid is not my son (No-no-no-no)
-                [Outro]
-                She says I am the one (You know what you did)
-                She says he is my son (Breakin' my heart, babe)
-                She says I am the one
-                Yeah, yeah, Billie Jean is not my lover, uh
-                Yeah, Billie Jean is not my lover, uh
-                Yeah, Billie Jean is not my lover, uh (She is just a girl)
-                Yeah, Billie Jean is not my lover, uh (She is just a girl; don't call me Billie Jean, hoo)
-                Billie Jean is not my lover, uh (She is just a girl; she's not at the scene)
-                Billie Jean is not (Hee), aaow, ooh
-                Yeah, Billie Jean is                
-                </p>
-                <div class="link-container"> <!-- Container für die Links unten rechts -->
-                    <a href="jonas.html">← jonas</a> <!-- Link 1 -->
-                    <a href="matteo.html">← matteo</a> <!-- Link 2 -->
-                    <a href="zoe.html">← zoe</a> <!-- Link 3 -->
-                    <a href="lorenz.html">← lorenz</a> <!-- Link 4 -->
-                    <a href="joshua.html">← joshua</a> <!-- Link 5 -->
-                    <a href="nur ein wort.html">← üsdfäölwems</a> <!-- Link 5 -->
-                </div>
+
+            <p>[Verse 1]<br>
+                She was more like a beauty queen from a movie scene. 
+                I said, "Don't mind, but what do you mean, I am the <span class="blank" id="blank1" contenteditable="true"></span> 
+                Who will dance on the floor in the <span class="blank" id="blank2" contenteditable="true"></span>?" 
+                She said I am the <span class="blank" id="blank3" contenteditable="true"></span> 
+                Who will dance on the floor in the <span class="blank" id="blank4" contenteditable="true"></span>. 
+                She told me her name was Billie Jean as she caused a scene. 
+                Then every head turned with eyes that dreamed of bein' the <span class="blank" id="blank5" contenteditable="true"></span> 
+                Who will dance on the floor in the <span class="blank" id="blank6" contenteditable="true"></span>.
+            </p>
+
+            <p>[Pre-Chorus]<br>
+                People always told me, "Be careful of what you <span class="blank" id="blank7" contenteditable="true"></span>. 
+                Don't go around breakin' young girls' hearts" (Hee-hee). 
+                And mother always told me, "Be careful of who you <span class="blank" id="blank8" contenteditable="true"></span>. 
+                And be careful of what you do (Oh-oh) 
+                'Cause the <span class="blank" id="blank9" contenteditable="true"></span> becomes the truth" (Oh-oh), hey-ey.
+            </p>
+
+            <p>[Chorus]<br>
+                Billie Jean is not my <span class="blank" id="blank10" contenteditable="true"></span>, uh. 
+                She's just a girl who claims that I am the <span class="blank" id="blank11" contenteditable="true"></span> (Oh, baby). 
+                But the kid is not my <span class="blank" id="blank12" contenteditable="true"></span> (Hoo). 
+                She says I am the <span class="blank" id="blank13" contenteditable="true"></span> (Oh, baby) 
+                But the kid is not my <span class="blank" id="blank14" contenteditable="true"></span> 
+                (Hee-hee-hee, no-no, hee-hee-hee, hoo).
+            </p>
+
+            <p>[Verse 2]<br>
+                For forty days and for forty nights, the law was on her <span class="blank" id="blank15" contenteditable="true"></span>. 
+                But who can stand when she's in demand? Her schemes and <span class="blank" id="blank16" contenteditable="true"></span>. 
+                'Cause we danced on the floor in the <span class="blank" id="blank17" contenteditable="true"></span> (Hee). 
+                So take my strong advice. 
+                Just remember to always think <span class="blank" id="blank18" contenteditable="true"></span>. 
+                (Don't think twice) Do think <span class="blank" id="blank19" contenteditable="true"></span>! (A-hoo!) 
+                She told my baby we'd danced 'til three, then she looked at me. 
+                Then showed a photo of a baby cryin', his eyes were like <span class="blank" id="blank20" contenteditable="true"></span> (Oh, no). 
+                'Cause we danced on the floor in the <span class="blank" id="blank21" contenteditable="true"></span>, baby (Ooh, hee-hee-hee).
+            </p>
+
+            <!-- Button to check answers -->
+            <button class="check-button" onclick="checkAnswers()">Check Answers</button>
+            <div class="result" id="resultMessage"></div> <!-- Result message -->
+
+            <div class="link-container"> <!-- Container for the links -->
+                <a href="jonas2.html">← jonas</a> <!-- Link 1 -->
+                <a href="matteo.html">← matteo</a> <!-- Link 2 -->
+                <a href="zoe.html">← zoe</a> <!-- Link 3 -->
+                <a href="joshua.html">← joshua</a> <!-- Link 4 -->
+                <a href="lorenz.html">← lorenz</a> <!-- Link 4 -->
+                <a href="nur ein wort.html">← üsdfäölwems</a> <!-- Link 5 -->
+            </div>
         </section>
     </main>
+
+    <script>
+        function checkAnswers() {
+            const userAnswers = [
+                document.getElementById("blank1").innerText.trim().toLowerCase(),
+                document.getElementById("blank2").innerText.trim().toLowerCase(),
+                document.getElementById("blank3").innerText.trim().toLowerCase(),
+                document.getElementById("blank4").innerText.trim().toLowerCase(),
+                document.getElementById("blank5").innerText.trim().toLowerCase(),
+                document.getElementById("blank6").innerText.trim().toLowerCase(),
+                document.getElementById("blank7").innerText.trim().toLowerCase(),
+                document.getElementById("blank8").innerText.trim().toLowerCase(),
+                document.getElementById("blank9").innerText.trim().toLowerCase(),
+                document.getElementById("blank10").innerText.trim().toLowerCase(),
+                document.getElementById("blank11").innerText.trim().toLowerCase(),
+                document.getElementById("blank12").innerText.trim().toLowerCase(),
+                document.getElementById("blank13").innerText.trim().toLowerCase(),
+                document.getElementById("blank14").innerText.trim().toLowerCase(),
+                document.getElementById("blank15").innerText.trim().toLowerCase(),
+                document.getElementById("blank16").innerText.trim().toLowerCase(),
+                document.getElementById("blank17").innerText.trim().toLowerCase(),
+                document.getElementById("blank18").innerText.trim().toLowerCase(),
+                document.getElementById("blank19").innerText.trim().toLowerCase(),
+                document.getElementById("blank20").innerText.trim().toLowerCase(),
+                document.getElementById("blank21").innerText.trim().toLowerCase(),
+            ];
+
+            // Correct answers in lowercase
+            const correctAnswers = [
+                "one", "round", "one", "round", "one", "round",
+                "do", "love", "lie", "lover", "one", "son",
+                "one", "son", "demand", "schemes", "floor",
+                "carefully", "twice", "eyes", "floor"
+            ];
+
+            let correctCount = 0;
+            for (let i = 0; i < userAnswers.length; i++) {
+                if (userAnswers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            const resultMessage = document.getElementById("resultMessage");
+            resultMessage.textContent = `You got ${correctCount} out of ${userAnswers.length} correct.`;
+        }
+    </script>
 </body>
 </html>
