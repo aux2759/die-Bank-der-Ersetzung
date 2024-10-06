@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Windows95Font';
+    src: url('fonts/W95FA.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure body fills full height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+    font-family: Windows95Font, Windows95Font;
+    background-color: #2a00ff; /* Default background color for other pages */
+    color: #ffffff;
+    line-height: 1.5;
+    padding: 20px; /* Add padding around the body */
+    min-height: 100vh; /* Ensure body fills at least the viewport height */
+}
+
+main {
+    margin-top: 200px; /* Adjust margin for spacing */
+    font-size: 3em; /* Increase the font size */
+}
+
+h2 {
+    font-size: 2.5em; /* Increase heading font size */
+}
+
+section {
+    margin-left: 50px; /* Maintain left alignment */
+    margin-bottom: 40px; /* Increase margin for spacing below section */
+}
+
+a {
+    color: white;   
+}

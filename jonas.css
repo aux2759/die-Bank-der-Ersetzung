@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Windows95Font';
+    src: url('fonts/W95FA.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure body fills full height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+    font-family: Windows95Font, Windows95Font;
+    background-color: #d4ffaa; /* Background color */
+    color: #000000; /* Black text color */
+    justify-content: center; /* Align children to the start */
+}
+
+.back-link {
+    position: absolute; /* Position link absolutely */
+    color: #d40000; /* White color for the link */
+    font-size: 1.2em; /* Adjust font size */
+}
+
+.top-left {
+    top: 20px; /* Position for top left link */
+    left: 20px; /* Position for top left link */
+}
+
+.bottom-right {
+    bottom: 20px; /* Position for bottom right link */
+    right: 20px; /* Position for bottom right link */
+}
+
+.jonas {
+    max-width: 100%; /* Make image responsive */
+    max-height: 100%; /* Ensure image does not exceed height */
+    margin: auto; /* Center image horizontally */
+    display: block; /* Ensure the image is displayed as a block */
+}
+
+.link-container {
+    position: absolute; /* Positioning for links */
+    bottom: 20px; /* Space from the bottom */
+    right: 20px; /* Space from the right */
+    text-align: left; /* Right align links */
+}
+
+.link-container a {
+    display: block; /* Display links one below the other */
+    color: #d40000; /* Link color */
+    margin: 5px 0; /* Space between links */
+    font-size: 1.3em
+}

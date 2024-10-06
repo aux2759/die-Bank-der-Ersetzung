@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Windows95Font';
+    src: url('fonts/W95FA.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 10%;  
+
+}
+
+body {
+    font-family: Windows95Font, Windows95Font;
+    background-color:#aa1faa;
+    color: #00ffff;
+    line-height: 1;
+}
+
+main {
+    margin-top: 0px;
+    font-size: 1.98em;
+}
+
+h2 {
+    font-size: 1.9em;
+}
+
+section {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+/* General link styles */
+a {
+    color: #00ffff;   
+}
+
+/* Page 1 styles */
+.billie-jean {
+    background-color: #aa1faa; /* New background color */
+    color: #00ffff; /* General text color */
+    height: 100%; /* Full height */
+}
+
+.billie-jean h2 {
+    color: #00ffff; /* White color for h2 */
+}
+
+.billie-jean a {
+    color: #00ffff; /* White color for links */
+}
+
+.link-container {
+    position: absolute; /* Absolut positioniert im Verhältnis zum übergeordneten Element */
+    right: 80px; /* Am rechten Rand */
+    text-align: left; /* Text rechts ausrichten */
+    margin-right: 80px; /* Abstand vom rechten Rand */
+}

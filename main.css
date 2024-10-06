@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Windows95Font';
+    src: url('fonts/W95FA.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;  
+    overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+    font-family: Windows95Font, Windows95Font;
+    background-color: #55ffff; /* Background color */
+    color: #ffffff;
+    line-height: 1.5;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Center horizontally */
+}
+
+main {
+    margin-top: 50px; /* Adjust margin for spacing */
+    font-size: 3.5em;
+    width: 100%; /* Ensure main takes full width */
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px; /* Space above the heading */
+}
+
+section {
+    text-align: center; /* Center text in section */
+    margin-bottom: 40px;
+}
+
+/* Centered link styles */
+.centered-link {
+    margin-bottom: 20px; /* Spacing below the link */
+}
+
+/* Additional styles for the image container */
+.image-container {
+    position: relative; /* Positionierung für die Links */
+    display: flex; /* Flexbox verwenden, um Bild und Links nebeneinander anzuzeigen */
+    align-items: flex-end; /* Ausrichtung am unteren Rand */
+    justify-content: center; /* Zentriert das Bild und die Links */
+    margin-top: 20px; /* Abstand oben zum Bild */
+    margin-right: 200px;
+}
+
+.cursed-image {
+    max-width: 60%; /* Bildbreite anpassen, je nach Bedarf */
+    height: auto; /* Proportionale Höhe */
+}
+
+/* Additional link container styles */
+.link-container {
+    position: absolute; /* Absolut positioniert im Verhältnis zum übergeordneten Element */
+    bottom: -20px; /* Am unteren Rand */
+    right: 80px; /* Am rechten Rand */
+    text-align: left; /* Text rechts ausrichten */
+    margin-right: 80px; /* Abstand vom rechten Rand */
+}
+
+.link-container a {
+    display: block; /* Links untereinander anzeigen */
+    color: white; /* Linkfarbe */
+    margin: 0; /* Abstand zwischen den Links auf 0 setzen */
+}
+
+.main {
+    background-color: #55ffff; /* New background color */
+    color: #f0f0f0; /* General text color */
+    height: 100%; /* Full height */
+}
+
+.main h2 {
+    color: #ffffff; /* White color for h2 */
+}
+
+.main a {
+    color: #ffffff; /* White color for links */
+}

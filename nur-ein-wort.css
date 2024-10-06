@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Windows95Font';
+    src: url('fonts/W95FA.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Stellen Sie sicher, dass der Body die volle Höhe einnimmt */
+}
+
+body {
+    font-family: Windows95Font, Windows95Font;
+    background-color: #d4ff00 ; /* Blauer Hintergrund */
+    display: flex; /* Flexbox für die Zentrierung */
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+}
+
+.container {
+    text-align: center; /* Zentrierter Text */
+}
+
+h1 {
+    font-size: 20em; /* Größe des Wortes */
+    color: #ffffff; /* Weiße Schriftfarbe */
+}
+.link-container {
+    position: absolute; /* Positioning for links */
+    bottom: 20px; /* Space from the bottom */
+    left: 20px; /* Space from the right */
+    text-align: left; /* Right align links */
+}
+
+.link-container a {
+    display: block; /* Display links one below the other */
+    color: white; /* Link color */
+    margin: 5px 0; /* Space between links */
+    font-size: 1.3em
+}
