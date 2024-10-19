@@ -29,10 +29,10 @@
             background-color: #55ff00; /* Background color */
             color: #ffffff; /* White text color */
             line-height: 1.5; /* Adjust line height for readability */
+            position: relative;
         }
 
         main {
-            margin-top: 0px;
             font-size: 2.5em; /* Main font size */
         }
 
@@ -48,6 +48,11 @@
         /* General link styles */
         a {
             color: white; /* Link color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         /* Page 1 styles */
@@ -71,6 +76,22 @@
             right: 60px; /* Space from the right */
             text-align: left; /* Align text to the left */
         }
+
+        /* Bottom left image container */
+        .image-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%; /* Take up the left half */
+            height: 50%; /* Bottom half of the viewport */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Make sure the image covers the entire container */
+        }
+
     </style>
 </head>
 <body>
@@ -93,13 +114,18 @@
                 navem devoravit. Odysseus, lugens et dolens, hoc 
                 difficile iter in memoriam retinuit.
             </p>
-            <div class="link-container"> <!-- Container für die Links unten rechts -->
+            <div class="link-container"> <!-- Container for the Links bottom right -->
                 <a href="band-gif.html">← abcdefg</a> <!-- Link 1 -->
-                <a href="index.html">← hijklmno</a> <!-- Link 2 -->
-                <a href="index.html">← pqrstuv</a> <!-- Link 3 -->
-                <a href="index.html">← wxyu</a> <!-- Link 4 -->
+                <a href="reise.html">← hijklmno</a> <!-- Link 2 -->
+                <a href="fisch.html">← pqrstuv</a> <!-- Link 3 -->
+                <a href="geschichte2.html">← wxyu</a> <!-- Link 4 -->
             </div>
         </section>
     </main>
+
+    <!-- Bottom left image container -->
+    <div class="image-container">
+        <img src="images/page1.png" alt="Image description">
+    </div>
 </body>
 </html>
