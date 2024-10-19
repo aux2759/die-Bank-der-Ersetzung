@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drucker einschalten</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font'; /* Name der Schriftart */
+            src: url('fonts/W95FA.otf') format('truetype'); /* Pfad zur Schriftartdatei */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #d4bfaa; /* Hintergrundfarbe */
+            font-family: 'Windows95Font', Arial, sans-serif; /* Schriftart */
+            color: #000; /* Textfarbe */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 500px; /* Breite des Druckerbildes */
+            height: auto; /* Höhe automatisch anpassen */
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 1.5em;
+            font-family: 'Windows95Font'; /* Name der Schriftart */
+            padding: 10px 20px;
+            background-color: #008080; /* Hintergrundfarbe für Button */
+            color: #ffffff; /* Textfarbe für Button */
+            border: none; /* Keine Rahmen */
+            border-radius: 5px; /* Abgerundete Ecken */
+            cursor: pointer; /* Zeiger beim Hover */
+        }
+
+        button:hover {
+            background-color: #007777; /* Etwas dunkler beim Hover */
+        }
+        .link {
+            margin-top: 10px; /* Abstand unterhalb des Textes */
+            font-size: 1.2em; /* Schriftgröße des Links */
+            
+        }
+
+        .link:hover {
+            text-decoration: underline; /* Unterstreichung beim Hover */
+        }
+
+        .links-container {
+            flex-direction: row; /* Anordnung der Links untereinander */
+            margin-top: 30px; /* Abstand unterhalb des Textes */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Schalte den Drucker ein!</h1>
+    <img src="images/printer.jpg" alt="Drucker"> <!-- Stelle sicher, dass der Pfad zur Druckerbilddatei korrekt ist -->
+    
+    <button id="power-button">On</button> <!-- Schaltfläche zum Einschalten -->
+
+    <script>
+        const button = document.getElementById('power-button');
+
+        button.addEventListener('click', () => {
+            button.innerText = 'Glückwunsch!'; // Text ändern, wenn der Button geklickt wird
+            button.disabled = true; // Button deaktivieren
+        });
+    </script>
+    <div class="links-container">
+        <a class="link" href="reise.html">Drucken</a>
+        
+        <a class="link" href="rtc.html">Drucker</a>
+</body>
+</html>

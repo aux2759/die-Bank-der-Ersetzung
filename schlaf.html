@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himmel</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font'; /* Name der Schriftart */
+            src: url('fonts/W95FA.otf') format('truetype'); /* Pfad zur Schriftartdatei */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Höhe der gesamten Seite */
+            background-color: #aa7f55; /* Hintergrundfarbe */
+            font-family: 'Windows95Font', Arial, sans-serif; /* Windows95-Schriftart */
+            color: #fffbf0; /* Textfarbe */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Für die Positionierung von Text und Links */
+            overflow: hidden; /* Verhindert Scrollen */
+        }
+
+        img {
+            max-width: 90%; /* Maximalbreite des Bildes */
+            max-height: 90%; /* Maximalhöhe des Bildes */
+        }
+
+        .text {
+            color: #fffbf0; /* Textfarbe */
+            position: absolute;
+            right: 10%; /* Text etwas von der rechten Seite entfernt */
+            bottom: 15%; /* Text etwas von der unteren Seite entfernt */
+            text-align: right; /* Text rechtsbündig */
+            font-size: 2em; /* Schriftgröße */
+        }
+        .link {
+            color: #fffbf0; /* Textfarbe */
+            font-size: 1.7em; /* Schriftgröße */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bild in der Mitte -->
+    <img src="images/schlaf.png" alt="Schlaf Bild">
+
+    <!-- Text unterhalb des Bildes -->
+    <div class="text">
+        <p>Wie lange habe ich geschlafen,<br>dass unsere Zeit bereits vorbei ist?</p>
+    </div>
+
+    <!-- Link zurück zu index.html -->
+    <div class="links-container">
+        <a class="link" href="wodka nudeln.html">Willst du gehen?</a>
+
+        <a class="link" href="zoe2.html">Ich will nicht gehen</a>
+
+</body>
+</html>

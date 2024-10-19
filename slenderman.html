@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boo!</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font'; /* Name der Schriftart */
+            src: url('fonts/W95FA.otf') format('truetype'); /* Pfad zur Schriftartdatei */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Verhindert Scrollen */
+        }
+
+        body {
+            font-family: 'Windows95Font', Arial, sans-serif; /* Windows95-Schriftart */
+            position: relative;
+        }
+
+        /* Hintergrundbild */
+        #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/slenderman.png') no-repeat center center;
+            background-size: cover; /* Füllt das gesamte Fenster */
+            z-index: -1; /* Hintergrundebene */
+        }
+
+        /* Boo!-Text */
+        #boo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #d400aa;
+            font-size: 4em;
+            z-index: 1; /* Über dem Bild */
+            animation: moveBoo 8s linear infinite; /* Animation */
+        }
+
+        /* Animation des Boo!-Textes */
+        @keyframes moveBoo {
+            0% { top: 0; left: 0; }
+            25% { top: 0; left: 80%; }
+            50% { top: 80%; left: 80%; }
+            75% { top: 80%; left: 0; }
+            100% { top: 0; left: 0; }
+        }
+
+        /* Links */
+        .link {
+            position: absolute;
+            color: #ffffff; /* Weiße Links */
+            font-size: 1.5em;
+            z-index: 1; /* Über dem Bild */
+        }
+
+        .link.top-left {
+            top: 20px;
+            left: 20px;
+        }
+
+        .link.top-right {
+            top: 20px;
+            right: 20px;
+        }
+
+        .link.bottom-left {
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .link.bottom-right {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .link:hover {
+            text-decoration: underline; /* Unterstreichung beim Hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="background"></div> <!-- Bild im Hintergrund -->
+
+    <!-- Boo!-Text, der sich bewegt -->
+    <div id="boo">boo!</div>
+
+    <!-- Links zu index.html -->
+    <a class="link top-left" href="darts.html">Slender</a>
+    <a class="link top-right" href="alle.html">m</a>
+    <a class="link bottom-left" href="1-100.html">A</a>
+    <a class="link bottom-right" href="CURSSED MATTEO.html">n</a>
+
+</body>
+</html>

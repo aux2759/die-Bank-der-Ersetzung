@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeitzonen in Echtzeit</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font';
+            src: url('fonts/W95FA.otf') format('truetype'); /* Pfad zur Schriftartdatei */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Windows95Font', Arial, sans-serif;
+            background-color: #000080; /* Windows 95-ähnlicher Hintergrund */
+            color: #7fff00; /* Windows 95-ähnliche Textfarbe */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            z-index: 1; /* Über dem Bild */
+        }
+
+        .clock {
+            margin: 10px;
+            font-size: 2em; /* Große Schriftgröße für die Uhrzeiten */
+            z-index: 1; /* Über dem Bild */
+        }
+
+        img {
+            width: 200px; /* Breite des Bildes */
+            height: 300px; /* Höhe des Bildes für 2:3 Verhältnis */
+            object-fit: cover; /* Bildausschnitt zentrieren */
+        }
+
+        .image-container {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            top: 20%;
+        }
+
+        .middle-img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .links-container {
+            position: absolute;
+            bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            z-index: 1; /* Über dem Bild */
+        }
+
+        .link {
+            color: #7fff00; /* Textfarbe */
+            font-size: 1.5em;
+            z-index: 1; /* Über dem Bild */
+        }
+
+        .link:hover {
+            text-decoration: underline; /* Unterstreichen bei Hover */
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Aktuelle Zeit in verschiedenen Zeitzonen</h1>
+
+    <div class="clock" id="local-time">Lokal: </div>
+    <div class="clock" id="new-york-time">New York: </div>
+    <div class="clock" id="london-time">London: </div>
+    <div class="clock" id="tokyo-time">Tokyo: </div>
+    <div class="clock" id="sydney-time">Sydney: </div>
+
+    <!-- Bild links, rechts und in der Mitte -->
+    <div class="image-container">
+        <img src="images/clock.png" alt="Uhr links">
+        <img class="middle-img" src="images/clock.png" alt="Uhr in der Mitte">
+        <img src="images/clock.png" alt="Uhr rechts">
+    </div>
+
+    <!-- Text-Links -->
+    <div class="links-container">
+        <a class="link" href="stay hydrated.html">Ist die Zeit schon vorbei?</a>
+        <a class="link" href="stimm mal.html">Wie lange haben wir noch?</a>
+    </div>
+
+    <script>
+        function updateClocks() {
+            const now = new Date();
+
+            // Lokale Zeit
+            document.getElementById('local-time').innerHTML = `Lokal: ${now.toLocaleTimeString()}`;
+
+            // New York Zeit (GMT-4 oder GMT-5 je nach Sommerzeit)
+            const newYorkTime = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
+            document.getElementById('new-york-time').innerHTML = `New York: ${newYorkTime.toLocaleTimeString()}`;
+
+            // London Zeit (GMT oder GMT+1 je nach Sommerzeit)
+            const londonTime = new Date(now.toLocaleString("en-GB", { timeZone: "Europe/London" }));
+            document.getElementById('london-time').innerHTML = `London: ${londonTime.toLocaleTimeString()}`;
+
+            // Tokyo Zeit (GMT+9)
+            const tokyoTime = new Date(now.toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" }));
+            document.getElementById('tokyo-time').innerHTML = `Tokyo: ${tokyoTime.toLocaleTimeString()}`;
+
+            // Sydney Zeit (GMT+10 oder GMT+11 je nach Sommerzeit)
+            const sydneyTime = new Date(now.toLocaleString("en-AU", { timeZone: "Australia/Sydney" }));
+            document.getElementById('sydney-time').innerHTML = `Sydney: ${sydneyTime.toLocaleTimeString()}`;
+        }
+
+        setInterval(updateClocks, 1000); // Aktualisiert jede Sekunde
+        updateClocks(); // Initialer Aufruf
+    </script>
+
+</body>
+</html>
