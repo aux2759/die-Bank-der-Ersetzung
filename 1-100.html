@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zähler</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font'; /* Name der Schriftart */
+            src: url('fonts/W95FA.otf') format('truetype'); /* Pfad zur Schriftartdatei */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #ffff00; /* Hintergrundfarbe */
+            color: #009f55; /* Textfarbe */
+            font-family: 'Windows95Font', Arial, sans-serif; /* Windows95-Schriftart */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #counter {
+            font-size: 12em; /* Sehr große Schriftgröße */
+
+        }
+        .links-container {
+            position: absolute;
+            bottom: 500px; /* Abstand von unten */
+            right: 80px; /* Abstand von links */
+            display: flex;
+            flex-direction: column; /* Anordnung der Links untereinander */
+            gap: 70px; /* Abstand zwischen den Links */
+        }
+
+        .link {
+            color: #009f55; /* Linkfarbe */
+            font-size: 1.7em; /* Schriftgröße des Links */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="counter">1</div>
+
+    <script>
+        let count = 1;
+        const counterElement = document.getElementById('counter');
+
+        function updateCounter() {
+            counterElement.textContent = count; // Aktualisiere den Zähler
+            count++; // Erhöhe den Zähler
+            if (count > 1000000) {
+                count = 1; // Setze den Zähler auf 1 zurück, wenn er 100 erreicht
+            }
+        }
+
+        setInterval(updateCounter, 400); // Aktualisiere den Zähler alle 100ms
+    </script>
+
+        <div class="links-container">
+            <a class="link" href="alle.html">100?</a>
+            <a class="link" href="band-gif.html">1000?</a>
+            <a class="link" href="billie jean.html">10000?</a>
+        </div>
+</body>
+</html>

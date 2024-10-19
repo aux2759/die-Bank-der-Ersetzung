@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Darts</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font';
+            src: url('fonts/W95FA.otf') format('truetype');
+        }
+
+        body {
+            font-family: 'Windows95Font', Arial, sans-serif;
+            background-color: #00ffaa; /* Background color */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .game-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+
+        #dartboard {
+            width: 100%;
+            height: 100%;
+            background-image: url('images/dartboard.jpg'); /* Updated dartboard image path */
+            background-size: cover;
+            border: 2px solid #000;
+        }
+
+        .dart {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .instructions {
+            font-size: 1.5em;
+            color: #333;
+            margin-top: 30px; /* Increased margin to create more space */
+            text-align: center;
+        }
+
+        .link-container {
+            position: absolute; /* Positioning for links */
+            bottom: 20px; /* Space from the bottom */
+            left: 20px; /* Space from the right */
+            text-align: right; /* Right align links */
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div id="dartboard"></div>
+    </div>
+    <div class="instructions">Wirf paar Darts!</div>
+
+    <div class="link-container"> <!-- Container für die Links unten rechts -->
+        <a href="ironic.html">← grass</a> <!-- Link 1 -->
+        <a href="printer.html">← wasser</a> <!-- Link 2 -->
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">← feuer</a> <!-- Link 4 -->
+    </div>
+
+    <script>
+        // Dartboard element
+        const dartboard = document.getElementById('dartboard');
+
+        // Add event listener to detect mouse click on dartboard
+        dartboard.addEventListener('click', function(event) {
+            // Get the position of the click relative to the dartboard
+            const rect = dartboard.getBoundingClientRect();
+            const x = event.clientX - rect.left - 5;  // Adjust to center the dart
+            const y = event.clientY - rect.top - 5;
+
+            // Create the dart element (a red circle)
+            const dart = document.createElement('div');
+            dart.classList.add('dart');
+            dart.style.left = `${x}px`;
+            dart.style.top = `${y}px`;
+
+            // Add the dart to the dartboard
+            dartboard.appendChild(dart);
+        });
+    </script>
+</body>
+</html>

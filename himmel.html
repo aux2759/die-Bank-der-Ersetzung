@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himmel</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font'; /* Name der Schriftart */
+            src: url('fonts/W95FA.otf') format('truetype'); /* Pfad zur Schriftartdatei */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Höhe der gesamten Seite */
+            background-color: #808080; /* Hintergrundfarbe */
+            font-family: 'Windows95Font', Arial, sans-serif; /* Windows95-Schriftart */
+            color: #fffbf0; /* Textfarbe */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Für die Positionierung von Text und Links */
+            overflow: hidden; /* Verhindert Scrollen */
+        }
+
+        img {
+            max-width: 90%; /* Maximalbreite des Bildes */
+            max-height: 90%; /* Maximalhöhe des Bildes */
+        }
+
+        .text {
+            position: absolute;
+            right: 10%; /* Text etwas von der rechten Seite entfernt */
+            bottom: 15%; /* Text etwas von der unteren Seite entfernt */
+            text-align: right; /* Text rechtsbündig */
+            font-size: 2em; /* Schriftgröße */
+        }
+
+        /* Styles für die Links */
+        .links-container {
+            position: absolute;
+            bottom: 50px; /* Abstand von unten */
+            left: 50px; /* Abstand von links */
+            display: flex;
+            flex-direction: column; /* Anordnung der Links untereinander */
+            gap: 10px; /* Abstand zwischen den Links */
+        }
+
+        .link {
+            color: #fffbf0; /* Linkfarbe */
+            font-size: 1.7em; /* Schriftgröße des Links */
+        }
+
+        .link:hover {
+            text-decoration: underline; /* Unterstreichung beim Hover */
+        }
+    </style>
+</head>
+<body>
+
+    <img src="images/himmel.png" alt="Himmel">
+
+    <div class="text">
+        <p>Alle erzählen mir, wie schön und warm es draußen ist,<br>
+        aber mir ist trotzdem kalt.</p>
+    </div>
+
+    <div class="links-container">
+        <a class="link" href="jetzt fängt die probe an.html">Zurück</a>
+        <a class="link" href="trofie.html">Zurück</a>
+        <a class="link" href="rtc.html">Zurück</a>
+    </div>
+
+</body>
+</html>
