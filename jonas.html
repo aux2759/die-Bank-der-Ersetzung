@@ -27,12 +27,19 @@
         body {
             font-family: Windows95Font, Windows95Font;
             background-color: #d4ffaa; /* Background color */
-            color: #000000; /* Black text color */
+            color: #d40000; /* Link color */
             display: flex; /* Use flexbox for layout */
             justify-content: center; /* Center items horizontally */
             position: relative; /* Position for absolute child elements */
         }
 
+        .text-yoyo {
+            position: absolute;
+            left: 10%; /* Slightly to the right */
+            top: 40%; /* Center vertically */
+            font-size: 3em; /* Large font size */
+        }
+        
         .jonas {
             max-width: 100%; /* Make image responsive */
             max-height: 100%; /* Ensure image does not exceed height */
@@ -58,11 +65,13 @@
 <body>
     <img src="images/jonas.png" alt="Jonas" class="jonas"> <!-- Bild -->
     
+    <div class="text-yoyo">"hehehe"</div> <!-- Text in der Mitte rechts -->
+
     <div class="link-container"> <!-- Container für die Links unten rechts -->
         <a href="hysteria.html">← hysteria</a> <!-- Link 1 -->
-        <a href="billie jean.html">← billie jean</a> <!-- Link 2 -->
+        <a href="ironic.html">← eyeyeyey</a> <!-- Link 2 -->
         <a href="wodka nudeln.html">← wodka nudeln rezept</a> <!-- Link 3 -->
-        <a href="index.html">← ironic</a> <!-- Link 4 -->
+        <a href="joshua2.html">← hallo</a> <!-- Link 4 -->
     </div>
 </body>
 </html>

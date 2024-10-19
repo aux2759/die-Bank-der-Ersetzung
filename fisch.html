@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semmel Frage</title>
+    <style>
+                @font-face {
+            font-family: 'Windows95Font'; /* Name der Schriftart */
+            src: url('fonts/W95FA.otf') format('truetype'); /* Pfad zur Schriftartdatei */
+            font-weight: normal;
+            font-style: normal;
+            font-size: larger;
+        }
+        body {
+            background-color: #d47f55; /* Hintergrundfarbe */
+            color: white; /* Textfarbe */
+            font-family: 'Windows95Font', Arial, sans-serif;
+            display: flex; /* Flexbox für Zentrierung */
+            flex-direction: column; /* Vertikale Anordnung */
+            justify-content: center; /* Vertikale Zentrierung */
+            align-items: center; /* Horizontale Zentrierung */
+            height: 100vh; /* Vollbildhöhe */
+            text-align: center; /* Text zentrieren */
+            margin: 0; /* Kein Margin */
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Abstand unter der Frage */
+            font-size: 2.5em; /* Schriftgröße */
+        }
+
+        img {
+            max-width: 50%; /* Maximalbreite für das Bild */
+            height: auto; /* Proportionale Höhe */
+            margin-bottom: 20px; /* Abstand unter dem Bild */
+        }
+
+        .link-container {
+            display: flex; /* Flexbox für Links */
+            gap: 20px; /* Abstand zwischen den Links */
+        }
+
+        a {
+            color: white; /* Linkfarbe */
+            font-size: 1.5em; /* Schriftgröße für Links */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Unterstreichung bei Hover */
+        }
+    </style>
+</head>
+<body>
+    <img src="images/fisch.jpg" alt="Semmel Bild">
+    <h1>Würdest Du diesen Fisch angeln?!?</h1>
+    <div class="link-container">
+        <a href="darts.html">Ja!</a>
+        <a href="jetzt fängt die probe an.html">Nein!</a>
+    </div>
+</body>
+</html>

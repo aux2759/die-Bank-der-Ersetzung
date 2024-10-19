@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reise</title>
+    <style>
+        @font-face {
+            font-family: 'Windows95Font'; /* Name der Schriftart */
+            src: url('fonts/W95FA.otf') format('truetype'); /* Pfad zur Schriftartdatei */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Höhe des gesamten Fensters */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #aa00ff; /* Hintergrundfarbe */
+            font-family: 'Windows95Font', Arial, sans-serif; /* Windows95-Schriftart */
+            color: #ffbf55; /* Textfarbe */
+            text-align: center; /* Text zentrieren */
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 90%; /* Maximale Breite des Bildes */
+            max-height: 70%; /* Maximale Höhe des Bildes */
+        }
+
+        .text {
+            font-size: 1.8em; /* Größe des Textes */
+            margin-top: 20px; /* Abstand über dem Text */
+        }
+
+        .link {
+            margin-top: 30px; /* Abstand unterhalb des Textes */
+            color: #ffbf55; /* Linkfarbe */
+            font-size: 1.2em; /* Schriftgröße des Links */
+            
+        }
+
+        .link:hover {
+            text-decoration: underline; /* Unterstreichung beim Hover */
+        }
+
+        .links-container {
+            flex-direction: row; /* Anordnung der Links untereinander */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bild in der Mitte -->
+    <img src="images/reise.png" alt="Reise Bild">
+
+    <!-- Text unterhalb des Bildes -->
+    <div class="text">
+        <p>Ich bin von so weit hergekommen.<br> Jetzt muss ich mich einen Moment ausruhen.<br> Du auch?</p>
+    </div>
+
+    <!-- Link zurück zu index.html -->
+    <div class="links-container">
+        <a class="link" href="stay hydrated.html">Kommst du mit?</a>
+
+        <a class="link" href="schola.html">Wie fühlst du dich?</a>
+        
+        <a class="link" href="trofie.html">Wärs okay?</a>
+
+</body>
+</html>
